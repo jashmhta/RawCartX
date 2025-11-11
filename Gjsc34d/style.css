@@ -336,3 +336,259 @@ input.invalid:focus {
     background-size: cover;
     background-position: center;
 }
+
+/* ==================== Product Cards Enhancement ==================== */
+
+.product-card {
+    transition: all 0.3s ease;
+    will-change: transform, box-shadow;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px -6px rgba(0,0,0,0.15);
+}
+
+.dark .product-card {
+    background-color: #1f2937;
+}
+
+.dark .product-card:hover {
+    background-color: #374151;
+}
+
+.product-card-image {
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-card-image {
+    transform: scale(1.05);
+}
+
+.attribute-tag {
+    transition: all 0.2s ease;
+    border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+.attribute-tag:hover {
+    background-color: rgba(168, 85, 247, 0.2);
+    border-color: var(--rk-purple);
+}
+
+/* ==================== Buttons Enhancement ==================== */
+
+.btn-primary,
+.btn-secondary,
+.cta-button {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-family: inherit;
+}
+
+.btn-primary:active,
+.btn-secondary:active,
+.cta-button:active {
+    transform: scale(0.98);
+}
+
+.btn-primary:disabled,
+.btn-secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* ==================== Form Enhancements ==================== */
+
+.form-input {
+    transition: all 0.2s ease;
+}
+
+.form-input:invalid:not(:placeholder-shown) {
+    border-color: #ef4444;
+}
+
+.form-input:valid:not(:placeholder-shown) {
+    border-color: var(--rk-green);
+}
+
+.form-input::placeholder {
+    color: #9ca3af;
+}
+
+.dark .form-input::placeholder {
+    color: #6b7280;
+}
+
+.error-message {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================== Loading States ==================== */
+
+.loading {
+    position: relative;
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* ==================== Scrollbar Styling ==================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f3f4f6;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #4b5563;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+}
+
+/* ==================== Focus Styles ==================== */
+
+*:focus-visible {
+    outline: 2px solid var(--rk-purple);
+    outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline-offset: 4px;
+}
+
+/* ==================== Accessibility Improvements ==================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ==================== Responsive Typography ==================== */
+
+@media (max-width: 640px) {
+    h1 { font-size: 1.875rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+    h4 { font-size: 1.125rem; }
+}
+
+/* ==================== Responsive Grid ==================== */
+
+@media (max-width: 768px) {
+    .timeline-event {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 2rem;
+        margin-left: 0;
+    }
+
+    .timeline-event:nth-child(odd),
+    .timeline-event:nth-child(even) {
+        padding-left: 2rem;
+    }
+
+    .timeline-event:nth-child(odd) .timeline-marker,
+    .timeline-event:nth-child(even) .timeline-marker {
+        left: -10px;
+        right: auto;
+    }
+
+    #company-timeline .timeline-line {
+        left: 0;
+    }
+}
+
+/* ==================== Container Queries Support ==================== */
+
+@supports (container-type: inline-size) {
+    .product-grid {
+        container-type: inline-size;
+    }
+}
+
+/* ==================== Smooth Transitions ==================== */
+
+a,
+button,
+input,
+textarea,
+select {
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* ==================== Print Styles ==================== */
+
+@media print {
+    #preloader,
+    header,
+    footer {
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .dark body {
+        background: white;
+        color: black;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
