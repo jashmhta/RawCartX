@@ -55,7 +55,11 @@ function Home() {
   return (
     <div data-testid="home-page">
       {/* Hero Section */}
-      <section className="hero-section" data-testid="hero-section">
+      <section 
+        className="hero-section" 
+        data-testid="hero-section"
+        style={{ backgroundImage: 'url(/assets/hero_image.jpg)' }}
+      >
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 p-6 max-w-4xl mx-auto text-center text-white">
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter leading-tight mb-4">
