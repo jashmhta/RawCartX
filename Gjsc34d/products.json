@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Fava Bean Protein Isolate",
+        "image": "assets/product_image.jpg",
+        "benefit": "Excellent emulsification for dairy alternatives.",
+        "attributes": ["Non-GMO", "Vegan", "Gluten-Free"],
+        "industry": "Plant-Based",
+        "functions": ["Emulsifier", "Protein Fortification"]
+    },
+    {
+        "id": 2,
+        "name": "Pea Protein Concentrate",
+        "image": "https://r2.flowith.net/files/png/rawkart-product-pea-protein_R5I.png",
+        "benefit": "High solubility and clean flavor profile for beverages.",
+        "attributes": ["Organic", "Vegan", "Non-GMO"],
+        "industry": "Sports Nutrition",
+        "functions": ["Protein Fortification", "Gelling Agent"]
+    },
+    {
+        "id": 3,
+        "name": "Chicory Root Fiber (Inulin)",
+        "image": "https://r2.flowith.net/files/png/rawkart-product-chicory-root_V8J.png",
+        "benefit": "Natural sweetness and prebiotic fiber for gut health.",
+        "attributes": ["Organic", "Gluten-Free"],
+        "industry": "Bakery",
+        "functions": ["Sweetener", "Fiber Enrichment"]
+    },
+    {
+        "id": 4,
+        "name": "Sunflower Lecithin",
+        "image": "https://r2.flowith.net/files/png/rawkart-product-sunflower_V98.png",
+        "benefit": "A non-allergenic emulsifier for confectionery and baked goods.",
+        "attributes": ["Non-GMO", "Vegan"],
+        "industry": "Confectionery",
+        "functions": ["Emulsifier"]
+    },
+    {
+        "id": 5,
+        "name": "Brown Rice Syrup Solids",
+        "image": "https://r2.flowith.net/files/png/rawkart-product-brown-rice_9Y2.png",
+        "benefit": "Provides mild sweetness and texture in nutritional bars.",
+        "attributes": ["Organic", "Gluten-Free"],
+        "industry": "Sports Nutrition",
+        "functions": ["Sweetener", "Binder"]
+    },
+    {
+        "id": 6,
+        "name": "Mung Bean Protein",
+        "image": "https://r2.flowith.net/files/png/rawkart-product-mung-bean_H45.png",
+        "benefit": "Superior gelling and foaming properties for egg replacement.",
+        "attributes": ["Vegan", "Non-GMO"],
+        "industry": "Plant-Based",
+        "functions": ["Gelling Agent", "Egg Replacement"]
+    }
+]

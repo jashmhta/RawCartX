@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredients Catalog | High-Quality B2B Food Ingredients | RawKart</title>
+    <meta name="description" content="Browse RawKart's extensive catalog of high-quality, reliable B2B food ingredients. Find plant-based proteins, natural extracts, and more for your manufacturing needs.">
+    <meta name="keywords" content="food ingredients catalog, product list, B2B ingredients, plant proteins, natural extracts, clean label ingredients, food manufacturing supplies">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "RawKart Ingredients Catalog",
+      "description": "A list of high-quality food ingredients supplied by RawKart.",
+      "url": "https://www.rawkart.com/products.html"
+    }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans">
+
+    <header class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm dark:shadow-gray-800/50 transition-colors duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="assets/logo.png" alt="RawKart Logo" class="h-10 md:h-12 object-contain">
+            </a>
+            <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="quality.html" class="nav-link">Quality</a>
+                <a href="resources.html" class="nav-link">Resources</a>
+                
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                    <i id="theme-toggle-dark-icon" data-lucide="moon" class="hidden w-5 h-5"></i>
+                    <i id="theme-toggle-light-icon" data-lucide="sun" class="hidden w-5 h-5"></i>
+                </button>
+                <button id="mobile-menu-button" class="md:hidden" aria-label="Open menu">
+                    <i data-lucide="menu" class="text-gray-800 dark:text-gray-100"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900/95 border-t border-gray-200 dark:border-gray-700">
+            <nav class="flex flex-col p-4 space-y-2">
+                <a href="index.html" class="nav-link-mobile">Home</a>
+                <a href="about.html" class="nav-link-mobile">About Us</a>
+                <a href="products.html" class="nav-link-mobile">Products</a>
+                <a href="quality.html" class="nav-link-mobile">Quality</a>
+                <a href="resources.html" class="nav-link-mobile">Resources</a>
+                
+                <a href="contact.html" class="nav-link-mobile">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <section class="py-12 md:py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-3xl md:text-5xl font-extrabold text-brand-purple dark:text-white tracking-tight">Ingredients Catalog</h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">Discover our range of pure, high-performance ingredients, meticulously sourced and tested for quality.</p>
+            </div>
+        </section>
+
+        <section class="container mx-auto px-6 pb-20">
+            <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+                
+                <aside id="filters-sidebar" class="w-full lg:w-1/4 xl:w-1/5 space-y-8">
+                    <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">Filters</h3>
+                        <div>
+                            <label for="search-input" class="sr-only">Search Ingredients</label>
+                            <div class="relative">
+                                <input type="search" id="search-input" placeholder="Search ingredients..." class="w-full py-2 pl-10 pr-4 border border-gray-300 dark:border-gray-600 rounded-lg bg-gray-50 dark:bg-gray-700 focus:ring-2 focus:ring-rk-purple focus:border-rk-purple">
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                    <i data-lucide="search" class="w-5 h-5 text-gray-400"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filter-accordion space-y-4 mt-6">
+                            <div id="industry-filters"></div>
+                            <div id="attribute-filters"></div>
+                            <div id="function-filters"></div>
+                        </div>
+                    </div>
+                </aside>
+
+                <div id="product-grid" class="w-full lg:w-3/4 xl:w-4/5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">RawKart</h3>
+                    <p class="text-gray-400">
+                        Our mission is to be the most reliable source for pure food ingredients, enabling our partners to create exceptional products for a healthier world.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="hover:text-rk-purple transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-rk-purple transition-colors">About Us</a></li>
+                        <li><a href="products.html" class="hover:text-rk-purple transition-colors">Products</a></li>
+                        <li><a href="quality.html" class="hover:text-rk-purple transition-colors">Quality</a></li>
+                        <li><a href="resources.html" class="hover:text-rk-purple transition-colors">Resources</a></li>
+                        
+                        <li><a href="contact.html" class="hover:text-rk-purple transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Contact Info</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-rk-green"></i>
+                            <span>123 Ingredient Lane, Food Science City, 12345</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="phone" class="w-5 h-5 mr-3 text-rk-green"></i>
+                            <a href="tel:+1234567890" class="hover:text-rk-purple transition-colors">+1 (234) 567-890</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="mail" class="w-5 h-5 mr-3 text-rk-green"></i>
+                            <a href="mailto:sales@rawkart.com" class="hover:text-rk-purple transition-colors">sales@rawkart.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Follow Us</h3>
+                    <p class="text-gray-400 mb-4">Connect with us on social media.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-rk-purple transition-colors" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-rk-purple transition-colors" aria-label="Twitter">
+                           <i data-lucide="twitter" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 RawKart. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+    <script type="module" src="products.js"></script>
+</body>
+</html>

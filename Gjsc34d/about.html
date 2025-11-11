@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | RawKart | Raw. Real. Reliable.</title>
+    <meta name="description" content="Learn about RawKart's mission, vision, and our unwavering commitment to providing raw, real, and reliable food ingredients.">
+    <meta name="keywords" content="about RawKart, food ingredient supplier history, company mission, company vision, B2B food sourcing">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "About Us | RawKart",
+      "description": "Learn about RawKart's mission, vision, and our unwavering commitment to providing raw, real, and reliable food ingredients.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "RawKart"
+      }
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 font-sans">
+
+    <header class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm dark:shadow-gray-800/50 transition-colors duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center">
+                <img src="assets/logo.png" alt="RawKart Logo" class="h-10 md:h-12 object-contain">
+            </a>
+            <nav class="hidden md:flex items-center space-x-6 lg:space-x-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="quality.html" class="nav-link">Quality</a>
+                <a href="resources.html" class="nav-link">Resources</a>
+                
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                    <i id="theme-toggle-dark-icon" data-lucide="moon" class="hidden w-5 h-5"></i>
+                    <i id="theme-toggle-light-icon" data-lucide="sun" class="hidden w-5 h-5"></i>
+                </button>
+                <button id="mobile-menu-button" class="md:hidden" aria-label="Open menu">
+                    <i data-lucide="menu" class="text-gray-800 dark:text-gray-100"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900/95 border-t border-gray-200 dark:border-gray-700">
+            <nav class="flex flex-col p-4 space-y-2">
+                <a href="index.html" class="nav-link-mobile">Home</a>
+                <a href="about.html" class="nav-link-mobile">About Us</a>
+                <a href="products.html" class="nav-link-mobile">Products</a>
+                <a href="quality.html" class="nav-link-mobile">Quality</a>
+                <a href="resources.html" class="nav-link-mobile">Resources</a>
+                
+                <a href="contact.html" class="nav-link-mobile">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative page-header h-screen min-h-[600px] max-h-[900px] flex items-center justify-center text-white text-center overflow-hidden">
+            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+                <source src="assets/video.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-black/60"></div>
+            <div class="relative z-10 p-6 max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter leading-tight">
+                    The People Behind the Purity
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl font-medium text-gray-200">
+                    Get to know the RawKart story.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-20 md:py-28 bg-white dark:bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto prose lg:prose-xl dark:prose-invert prose-h2:font-bold prose-h2:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 dark:prose-p:text-gray-300 dark:prose-li:text-gray-300">
+                    <div class="reveal-on-scroll is-visible">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl md:text-4xl">Our Story</h2>
+                            <div class="w-24 h-1 bg-rk-green mx-auto mt-4"></div>
+                        </div>
+                        <p>RawKart was founded on a simple, yet powerful idea: the food industry deserves a supplier that is as committed to purity and transparency as they are. We saw a gap between the producers of exceptional raw ingredients and the businesses striving to create clean, high-quality products for consumers. Our journey began with a mission to bridge that gap, building a supply chain founded on trust, quality, and partnership.</p>
+                        <p>From day one, our focus has been on sourcing the finest ingredients directly from their origins, ensuring they are natural and minimally processed. We believe that what we leave out is just as important as what we put in. This philosophy is the bedrock of our company and the promise we make to every client.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="company-timeline" class="py-20 md:py-28 bg-gray-50 dark:bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-20">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Our Journey</h2>
+                    <div class="w-24 h-1 bg-rk-green mx-auto mt-4"></div>
+                </div>
+                <div class="relative max-w-4xl mx-auto">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-event">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-item-header" role="button" aria-expanded="false">
+                            <h3 class="text-xl font-bold text-rk-purple mb-0">2004 - The Spark</h3>
+                            <i data-lucide="chevron-down" class="timeline-arrow w-6 h-6 text-gray-600 dark:text-gray-400"></i>
+                        </div>
+                        <div class="timeline-item-content">
+                            <p class="text-gray-600 dark:text-gray-300">RawKart is founded by a team of food scientists and supply chain experts with a vision to revolutionize ingredient sourcing.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-marker"></div>
+                         <div class="timeline-item-header" role="button" aria-expanded="false">
+                            <h3 class="text-xl font-bold text-rk-purple mb-0">2008 - First Warehouse</h3>
+                            <i data-lucide="chevron-down" class="timeline-arrow w-6 h-6 text-gray-600 dark:text-gray-400"></i>
+                        </div>
+                        <div class="timeline-item-content">
+                            <p class="text-gray-600 dark:text-gray-300">Opened our first state-of-the-art warehouse, setting new standards for ingredient storage and handling.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-item-header" role="button" aria-expanded="false">
+                            <h3 class="text-xl font-bold text-rk-purple mb-0">2012 - Global Sourcing Initiative</h3>
+                            <i data-lucide="chevron-down" class="timeline-arrow w-6 h-6 text-gray-600 dark:text-gray-400"></i>
+                        </div>
+                        <div class="timeline-item-content">
+                            <p class="text-gray-600 dark:text-gray-300">Expanded our network to over 15 countries, establishing direct partnerships with growers and producers worldwide.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-event">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-item-header" role="button" aria-expanded="false">
+                            <h3 class="text-xl font-bold text-rk-purple mb-0">2018 - Tech Integration</h3>
+                            <i data-lucide="chevron-down" class="timeline-arrow w-6 h-6 text-gray-600 dark:text-gray-400"></i>
+                        </div>
+                        <div class="timeline-item-content">
+                            <p class="text-gray-600 dark:text-gray-300">Launched our proprietary traceability platform, offering clients unprecedented transparency into the supply chain.</p>
+                        </div>
+                    </div>
+                     <div class="timeline-event">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-item-header" role="button" aria-expanded="false">
+                            <h3 class="text-xl font-bold text-rk-purple mb-0">2024 - A New Era</h3>
+                            <i data-lucide="chevron-down" class="timeline-arrow w-6 h-6 text-gray-600 dark:text-gray-400"></i>
+                        </div>
+                        <div class="timeline-item-content">
+                            <p class="text-gray-600 dark:text-gray-300">Celebrating 20 years of excellence, RawKart continues to lead the industry in quality, innovation, and reliability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 md:py-28 bg-white dark:bg-gray-900">
+             <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto prose lg:prose-xl dark:prose-invert prose-h2:font-bold prose-h2:text-gray-900 prose-p:text-gray-600 prose-li:text-gray-600 dark:prose-p:text-gray-300 dark:prose-li:text-gray-300">
+                    <div class="reveal-on-scroll is-visible">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl md:text-4xl">Mission & Vision</h2>
+                            <div class="w-24 h-1 bg-rk-green mx-auto mt-4"></div>
+                        </div>
+                        <p><strong>Our Mission:</strong> To be the most reliable B2B source for pure, high-quality food ingredients, empowering our partners to create exceptional products that contribute to a healthier world. We are dedicated to a transparent supply chain, rigorous quality standards, and building lasting relationships.</p>
+                        <p><strong>Our Vision:</strong> To lead the food ingredient industry towards a future where authenticity and transparency are the norm. We envision a world where every business, big or small, has access to ingredients they can trust, enabling innovation and fostering consumer confidence.</p>
+                    </div>
+
+                    <div class="mt-20 reveal-on-scroll is-visible">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl md:text-4xl">Raw. Real. Reliable.</h2>
+                            <div class="w-24 h-1 bg-rk-green mx-auto mt-4"></div>
+                        </div>
+                        <p>Our tagline is more than just words; it's our operating principle and the core of our identity.</p>
+                        <ul>
+                            <li><strong>Raw:</strong> We honor the natural integrity of our ingredients. We source materials that are as close to their original state as possible, ensuring purity and potency.</li>
+                            <li><strong>Real:</strong> We operate with genuine purpose and authenticity. Our mission is real, our partnerships are real, and our commitment to our customers' success is unwavering.</li>
+                            <li><strong>Reliable:</strong> We are the partner you can depend on. From consistent quality and supply to dependable service and expert support, reliability is woven into every aspect of our business.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">RawKart</h3>
+                    <p class="text-gray-400">
+                        Our mission is to be the most reliable source for pure food ingredients, enabling our partners to create exceptional products for a healthier world.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="hover:text-rk-purple transition-colors">Home</a></li>
+                        <li><a href="about.html" class="hover:text-rk-purple transition-colors">About Us</a></li>
+                        <li><a href="products.html" class="hover:text-rk-purple transition-colors">Products</a></li>
+                        <li><a href="quality.html" class="hover:text-rk-purple transition-colors">Quality</a></li>
+                        <li><a href="resources.html" class="hover:text-rk-purple transition-colors">Resources</a></li>
+                        
+                        <li><a href="contact.html" class="hover:text-rk-purple transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Contact Info</h3>
+                    <ul class="space-y-3 text-gray-400">
+                        <li class="flex items-start">
+                            <i data-lucide="map-pin" class="w-5 h-5 mr-3 mt-1 flex-shrink-0 text-rk-green"></i>
+                            <span>123 Ingredient Lane, Food Science City, 12345</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="phone" class="w-5 h-5 mr-3 text-rk-green"></i>
+                            <a href="tel:+1234567890" class="hover:text-rk-purple transition-colors">+1 (234) 567-890</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="mail" class="w-5 h-5 mr-3 text-rk-green"></i>
+                            <a href="mailto:sales@rawkart.com" class="hover:text-rk-purple transition-colors">sales@rawkart.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">Follow Us</h3>
+                    <p class="text-gray-400 mb-4">Connect with us on social media.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-rk-purple transition-colors" aria-label="LinkedIn">
+                            <i data-lucide="linkedin" class="w-6 h-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-rk-purple transition-colors" aria-label="Twitter">
+                           <i data-lucide="twitter" class="w-6 h-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 RawKart. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
