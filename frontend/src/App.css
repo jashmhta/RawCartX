@@ -301,3 +301,57 @@ html.dark .text-gray-800 {
 html.dark .text-gray-900 {
   color: #ffffff;
 }
+
+.hero-section {
+  position: relative;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/assets/hero_image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 600px;
+    background-attachment: scroll;
+  }
+}
+
+.page-header {
+  position: relative;
+  padding: 8rem 0;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 6rem 0;
+  }
+}
+
+.stat-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+html.dark .stat-card {
+  background-color: #1a1a1a;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+html.dark .stat-card:hover {
+  box-shadow: 0 12px 24px rgba(156, 214, 78, 0.2);
+}
