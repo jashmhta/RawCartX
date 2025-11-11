@@ -115,12 +115,26 @@ const initializeTheme = () => {
 
         if (isDark) {
             document.documentElement.classList.add('dark');
-            if (lightIcon) lightIcon.classList.remove('hidden');
-            if (darkIcon) darkIcon.classList.add('hidden');
+            if (lightIcon) {
+                lightIcon.classList.remove('hidden');
+                lightIcon.classList.add('inline-block');
+            }
+            if (darkIcon) {
+                darkIcon.classList.add('hidden');
+                darkIcon.classList.remove('inline-block');
+            }
+            document.body.style.colorScheme = 'dark';
         } else {
             document.documentElement.classList.remove('dark');
-            if (darkIcon) darkIcon.classList.remove('hidden');
-            if (lightIcon) lightIcon.classList.add('hidden');
+            if (darkIcon) {
+                darkIcon.classList.remove('hidden');
+                darkIcon.classList.add('inline-block');
+            }
+            if (lightIcon) {
+                lightIcon.classList.add('hidden');
+                lightIcon.classList.remove('inline-block');
+            }
+            document.body.style.colorScheme = 'light';
         }
     };
 
